@@ -5,33 +5,29 @@ My first mistake when I started programming with Vue JS, it was thinking that th
 
 But no, each library or framework work a little bit different, but the result that they give us it is similar.
 
-They give us special methods that allow us how things work behind-the-scenes. These methods allow us to know when a component is created, added to the DOM, updated, or destroyed in the Vue instance.
+They give us special methods that allow us how things work behind-the-scenes. These methods allow us to know when a component is created, added to the DOM, updated, or destroyed.
 
-### How does it work in React JS?
-In React you have two ways to create a component, and the lifecycle work different.
-
-**Class Component:**
-You have 4 phases:
-- Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
-- Mounting: is the stage of rendering the JSX returned by the render method itself.
-- Updating: is the stage when the state of a component is updated and the application is repainted.
-- Unmounting: is the final step of the component lifecycle where the component is removed from the page.
-
-[Imagen]
-
-**Function Component:**
-You have 3 phases:
+In React JS in Function Components you have 3 phases:
 - Initial Render or Mount
 - Update (updating states or props)
 - Unmount
 
-[Imagen]
+### Code example: 
 
-In both cases they return a JSX and React and React DOM calculate what thing changes and they do the changes only in the places that need it.
+<iframe src="https://codesandbox.io/embed/optimistic-solomon-rr8ckk?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="optimistic-solomon-rr8ckk"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+</iframe>
 
+In each render and re-redender when the state change it, the function return the JSX and React (React js and ReactDom) calculate what thing changes and after that modify the places that it need a change in the dom. when the component is unmouted it clear the setInterval.
 
+## How is it in Vue js?
+![image](https://user-images.githubusercontent.com/38573357/198037458-8f5a26fe-ce1f-4822-a760-97c0e52958ed.png)
 
-### How does it work in Vue JS?
+I get this image from [vuejs.org](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
 
+## Hooks
 
 ## Conclucion
