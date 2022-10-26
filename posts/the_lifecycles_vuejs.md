@@ -84,7 +84,7 @@ const IamABadComponent = ()=> {
  
  const fn = () => {};
  
- //             👇🏻 array is the array dependencies, in this case the function exect when the component mount.
+ //             👇🏻 it is the array dependencies, in this case the function exect when the component mount.
  useEffect((fn, []);
  
  // this other case the function exect when the component mount and when the 'props.delay' change the value.
