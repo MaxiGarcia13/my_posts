@@ -5,29 +5,96 @@ My first mistake when I started programming with Vue JS, it was thinking that th
 
 But no, each library or framework work a little bit different, but the result that they give us it is similar.
 
-They give us special methods that allow us how things work behind-the-scenes. These methods allow us to know when a component is created, added to the DOM, updated, or destroyed.
+Each Vue component or React Function component goes through a series of initialization steps. for example when it's created, it needs to set up data, mount the component into the DOM, and update the DOM when data changes. it also runs functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages.
 
 In React JS in Function Components you have 3 phases:
 - Initial Render or Mount
 - Update (updating states or props)
 - Unmount
 
-### Code example: 
+***Code example:***
 
-<iframe src="https://codesandbox.io/embed/optimistic-solomon-rr8ckk?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="optimistic-solomon-rr8ckk"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
-</iframe>
+```
+import React, { useEffect, useState } from "react";
 
-In each render and re-redender when the state change it, the function return the JSX and React (React js and ReactDom) calculate what thing changes and after that modify the places that it need a change in the dom. when the component is unmouted it clear the setInterval.
+export const Counter = (props) => {
+  const [count, setCount] = useState(0);
 
-## How is it in Vue js?
+  const countHandler = () => {
+    setCount((preValue) => ++preValue);
+  };
+
+  useEffect(() => {
+    setInterval(countHandler, props.delay ?? 1000);
+    return clearInterval(countHandler);
+  }, []);
+
+  return <div className="counter">{count}</div>;
+};
+```
+
+Go to [demo](https://codesandbox.io/embed/optimistic-solomon-rr8ckk?fontsize=14&hidenavigation=1&theme=dark) 🚀
+
+In Vue js we have more phases (In this graphic we can see it better):
+
 ![image](https://user-images.githubusercontent.com/38573357/198037458-8f5a26fe-ce1f-4822-a760-97c0e52958ed.png)
 
 I get this image from [vuejs.org](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
 
-## Hooks
+***Code example:***
+```
+<template>
+  <div class="counter">{{ count }}</div>
+</template>
+
+<script>
+import { ref, onBeforeUnmount } from "vue";
+
+export default {
+  name: "counter",
+  props: {
+    delay: Number,
+  },
+  setup(props) {
+    const count = ref(0);
+
+    const countHandler = () => {
+      count.value += 1;
+    };
+
+    setInterval(countHandler, props.delay ?? 1000);
+    onBeforeUnmount(countHandler);
+
+    return { count };
+  },
+};
+</script>
+```
+Go to [demo](https://codesandbox.io/s/eager-cache-7w7si9?file=/src/components/counter.vue:0-426) 🚀
+
+## How they work it:
+
+### React JS:
+In React in each render and re-redender of the component react'll call the function component and each variable or each hooks that you use it for example useEffect, they calculte again.
+
+```
+const IamABadComponent = ()=> {
+ const defaultDelay = 1000; // In each render or re-render this const it'll create and assign the value. 
+ 
+ const fn = () => {};
+ 
+ useEffect((fn, []); // -> this array is the array dependencies, in this case the function exect when the component mount.
+ useEffect((fn, props.delay ?? defaultDelay); // -> in this other case the function exect when the component mount and when the 'props.delay' change the value.
+return <div>Test</div>
+}
+```
+
+### Vue js
+The setup function it'll calculate one time, and then each hooks 
+
+
+## Vue Lifecycle Hooks
+
+## Good practice
 
 ## Conclucion
