@@ -14,7 +14,7 @@ In React JS in Function Components you have 3 phases:
 
 ***Code example:***
 
-```
+```js
 import React, { useEffect, useState } from "react";
 
 export const Counter = (props) => {
@@ -42,7 +42,7 @@ In Vue js we have more phases (In this graphic we can see it better):
 I get this image from [vuejs.org](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
 
 ***Code example:***
-```
+```js
 <template>
   <div class="counter">{{ count }}</div>
 </template>
@@ -77,7 +77,7 @@ Go to [demo](https://codesandbox.io/s/eager-cache-7w7si9?file=/src/components/co
 ### React JS:
 In React in each render and re-redender of the component react'll call the function component and each variable or each hooks that you use it for example useEffect, they calculte again.
 
-```
+```js
 const IamABadComponent = ()=> {
 // In each render or re-render this const it'll create and assign the value. 
  const defaultDelay = 1000; 
