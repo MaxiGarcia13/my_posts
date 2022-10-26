@@ -79,12 +79,17 @@ In React in each render and re-redender of the component react'll call the funct
 
 ```
 const IamABadComponent = ()=> {
- const defaultDelay = 1000; // In each render or re-render this const it'll create and assign the value. 
+// In each render or re-render this const it'll create and assign the value. 
+ const defaultDelay = 1000; 
  
  const fn = () => {};
  
- useEffect((fn, []); // -> this array is the array dependencies, in this case the function exect when the component mount.
- useEffect((fn, props.delay ?? defaultDelay); // -> in this other case the function exect when the component mount and when the 'props.delay' change the value.
+ //             👇🏻 array is the array dependencies, in this case the function exect when the component mount.
+ useEffect((fn, []);
+ 
+ // this other case the function exect when the component mount and when the 'props.delay' change the value.
+ useEffect((fn, props.delay ?? defaultDelay); 
+ 
 return <div>Test</div>
 }
 ```
