@@ -193,7 +193,7 @@ When this hook is called, the component instance is still fully functional.
 #### onUpdated
 This hook is called after any DOM update of the component, which can be caused by different state changes.
 
-_⚠️ Do not mutate component state in the updated hook - you can produce an infinite update loop!_
+_⚠️ Do not mutate component state in the updated hook - you can create an infinite update loop!_
 
 #### onBeforeUpdate
 This hook can be used to access the DOM state before Vue updates the DOM. It is also safe to modify component state inside this hook.
