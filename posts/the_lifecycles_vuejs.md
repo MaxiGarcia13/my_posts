@@ -1,4 +1,4 @@
-# Lifecycles of Vue JS (for React JS developer).
+# Vue JS Lifecycles (for React JS developer)
 
 When I started to develop with Vue js My first mistake was thinking that the life cycle was similar than React JS.
 
