@@ -191,15 +191,11 @@ Registers a hook to be called right before a component instance is to be unmount
 When this hook is called, the component instance is still fully functional.
 
 #### onUpdated
-Registers a callback to be called after the component has updated its DOM tree due to a reactive state change.
-
 This hook is called after any DOM update of the component, which can be caused by different state changes.
 
-_⚠️ Do not mutate component state in the updated hook - this will likely lead to an infinite update loop!_
+_⚠️ Do not mutate component state in the updated hook - you can produce an infinite update loop!_
 
 #### onBeforeUpdate
-Registers a hook to be called right before the component is about to update its DOM tree due to a reactive state change.
-
 This hook can be used to access the DOM state before Vue updates the DOM. It is also safe to modify component state inside this hook.
 
 #### onErrorCaptured
@@ -214,7 +210,7 @@ Errors can be captured from the following sources:
 - Custom directive hooks
 - Transition hooks
 
-The hook can return false to stop the error from propagating further. See error propagation details below.
+The hook can return false to stop the error from propagating further.
 
 ```js
 <template>
@@ -250,8 +246,8 @@ export default {
 Go to [demo](https://codesandbox.io/s/eager-cache-7w7si9?file=/src/components/error-boundary.vue)
 
 ## Conclusion
-It is important to undertand how work the life cycle of the component and how you can use it. because you can improve the performance of your component avoiding unnecessarries renders and create more robust components.
-
+It’s important to understand how the life cycle and the component works and how you can use it. You can improve the performance of your component by avoiding unnecessarries renders and create more robust components.
+  
 If you want to know more about life-cycle you can go to the official documentation of:
 
 - [Vue JS](https://vuejs.org/api/composition-api-lifecycle.html)
