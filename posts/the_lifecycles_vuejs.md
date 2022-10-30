@@ -1,8 +1,8 @@
 # Vue JS Lifecycles (for React JS developer)
 
-When I started to develop with Vue js My first mistake was thinking that the life cycle was similar than React JS.
+When I started to develop with Vue js My first mistake was thinking that the life cycle was similar to React JS.
 
-But no, each library or framework work a little bit different, but the result that they give us it is similar.
+But no, each library or framework works a little bit different, but the result that they give us is similar.
 
 Each Vue component or React Function component goes through a series of steps. for example when it's created, it needs to set up data, mount the component into the DOM, and update the DOM when data changes.
 
@@ -36,11 +36,11 @@ export const Counter = (props) => {
 
 Go to [demo](https://codesandbox.io/embed/optimistic-solomon-rr8ckk?fontsize=14&hidenavigation=1&theme=dark) 🚀
 
-In **Vue JS** we have more phases (In this graphic we can see it better):
+In **Vue JS** we have more phases (We can see it better in this image):
 
 ![image](https://user-images.githubusercontent.com/38573357/198037458-8f5a26fe-ce1f-4822-a760-97c0e52958ed.png)
 
-I get this image from [vuejs.org](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
+I got this image from [vuejs.org](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
 
 ```js
 <template>
@@ -75,7 +75,7 @@ Go to [demo](https://codesandbox.io/s/eager-cache-7w7si9?file=/src/components/co
 ## How does it work?
 
 ### React JS:
-In React in each render and re-redender of the component react will call the function component and each variable or each hooks that you use it for example useEffect, it try to calculte again the function (first check what hooks need to update in your component and then).
+In React each render and re-redender of the component react will call the function component and each variable or each hooks that you use it for example useEffect, it try to calculte again the function (first check what hooks need to update in your component and then).
 
 ```js
 const IamABadComponent = ()=> {
