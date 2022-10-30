@@ -14,7 +14,7 @@ repo: https://github.com/MaxiGarcia13/examples-react
 
 repo: https://github.com/MaxiGarcia13/bash_prompt
 
-## Vue lifecycles 
+## Vue JS Lifecycles (for React JS developer)
 
 ⚠️ in progress
 
