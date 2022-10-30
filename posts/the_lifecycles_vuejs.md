@@ -246,7 +246,7 @@ export default {
 Go to [demo](https://codesandbox.io/s/eager-cache-7w7si9?file=/src/components/error-boundary.vue)
 
 ## Conclusion
-It’s important to understand how the life cycle and the component works and how you can use it. You can improve the performance of your component by avoiding unnecessarries renders and create more robust components.
+It’s important to understand how the life cycle and the component works and how you can use it. You can improve the performance of your component by avoiding unnecessary renders and create more robust components.
   
 If you want to know more about life-cycle you can go to the official documentation of:
 
