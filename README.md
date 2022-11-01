@@ -1,6 +1,6 @@
 # My Posts 🤓
 
-## How install docker without docker App?
+## How to install docker without docker App?
 
 repo: https://github.com/MaxiGarcia13/vagrant-docker-engine
 
