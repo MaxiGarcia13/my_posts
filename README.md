@@ -10,7 +10,7 @@ web: https://examples-react.vercel.app
 
 repo: https://github.com/MaxiGarcia13/examples-react
 
-## How have a pretty prompt without Oh-my-zsh
+## How to have a pretty prompt without Oh-my-zsh
 
 repo: https://github.com/MaxiGarcia13/bash_prompt
 
